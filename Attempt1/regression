@@ -1,6 +1,8 @@
 #!octave -qf
 
-fid = fopen("1.txt", "r");
+index = input("Which file to open? (enter index): " , "s");
+
+fid = fopen(["../2PtData/" index ".txt"], "r");
 in = fscanf(fid, "%d");
 fclose(fid);
 

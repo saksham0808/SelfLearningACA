@@ -10,9 +10,6 @@ if len(sys.argv) == 2:
     fileName = str(sys.argv[1])
     print ("File saving is on.")
 
-else
-    print ("File saving is off")
-
 elif len(sys.argv) > 2:
     print ("Error in arguements provided. Please check.")
 

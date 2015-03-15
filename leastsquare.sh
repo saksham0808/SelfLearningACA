@@ -2,7 +2,7 @@
 
 index = input("Which file to open? (enter index): " , "s");
 
-fid = fopen(["../2PtData/" index ".txt"], "r");
+fid = fopen(["LinData/" index ".txt"], "r");
 in = fscanf(fid, "%d");
 fclose(fid);
 
@@ -12,9 +12,6 @@ for i = 2:19999;
 	X = [X; 1, in(3*i+1), in(3*i+2)];
 	Y = [Y; in(3*i+3)-4];
 endfor;
-
-#disp(X)
-#disp(Y)
 
 w = inverse(transpose(X)*X)*transpose(X)*Y
 

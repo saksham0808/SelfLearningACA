@@ -22,21 +22,21 @@ toPrint = ""
 
 for i in range(0,num): 
     xPoint = np.random.normal( i/num * 3)
-    yPoint = np.random.normal( math.sin(xPoint) , 0.2)
+    yPoint = np.random.normal( math.tan(xPoint) , 0.2)
     print (xPoint),
     print ("\t\t"),
     print (yPoint)
     if toSaveData:
         toPrint += str(xPoint) + "\t\t" + str(yPoint) + "\n"
 
-    cv2.circle(img,(int(100*xPoint+250),int(100*yPoint+250)),3,(255,0,0),-1)
+    cv2.circle(img,(int(100*xPoint+250),500-int(100*yPoint+250)),3,(255,0,0),-1)
 
 cv2.imshow("My Window", img)
 
 # Writing image
 if toSaveData == 1:
-    cv2.imwrite("FxnData/" + fileName + ".jpg", img)
-    f = open("FxnData/" + fileName + ".txt", "w")
+    cv2.imwrite("DataCurve/" + fileName + ".jpg", img)
+    f = open("DataCurve/" + fileName + ".txt", "w")
     f.write(toPrint)
     f.close()
 

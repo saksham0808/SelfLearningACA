@@ -8,7 +8,7 @@ noise = 80
 if len(sys.argv) == 2:
     toSaveData = 1
     fileName = str(sys.argv[1])
-    #print ("File saving is on.")
+    print ("File saving is on.")
 
 elif len(sys.argv) == 3:
     if int(sys.argv[1]) == 0:
@@ -16,16 +16,17 @@ elif len(sys.argv) == 3:
     else:
         toSaveData = 1
         fileName = str(sys.argv[1])
+        print ("File saving is on.")
     
     noise = int(sys.argv[2])
-
 
 
 elif len(sys.argv) > 3:
     print ("Error in arguements provided. Please check.")
 
-input = input("")
-num = int(input)
+
+input_num = input("How many points do you want?: ")
+num = int(input_num)
 
 img = np.zeros((740,740,3), np.uint8)
 cv2.namedWindow("My Window")

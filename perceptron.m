@@ -15,6 +15,7 @@ endfor;
 
 # Least square
 w = inverse(transpose(X)*X)*transpose(X)*Y
+disp(w)
 
 w_backup = w;
 
